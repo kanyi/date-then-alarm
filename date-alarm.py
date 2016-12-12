@@ -1,5 +1,4 @@
-#! /usr/bin/python3
- # -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 """
 Small program for ask a date and then ask days number and combine these two data.
@@ -11,10 +10,7 @@ Later create an alarm for this.
 #https://pymotw.com/3/datetime/
 
 import datetime
-#from datetime import datetime
-#td=date.fromtimestamp(time.time())
 now=datetime.datetime.now() #precise timestamp
-#ma = datetime.datetime.now()
 ma = datetime.date.today() #only the date
 
 print("a mai dátum", ma, "pontosabban:", now)
