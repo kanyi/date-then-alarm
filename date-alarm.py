@@ -10,16 +10,20 @@ Later create an alarm for this.
 #https://pymotw.com/3/datetime/
 
 import datetime
+import calendar
 now=datetime.datetime.now() #precise timestamp
 ma = datetime.date.today() #only the date
 
 print("a mai dátum", ma, "pontosabban:", now)
 hebrakolas_datuma=input("hebrákolás dátuma (YYYY-mm-dd):")
 hebrakolas_datuma=datetime.datetime.strptime(hebrakolas_datuma, "%Y-%m-%d")
+print (calendar.TextCalendar(calendar.MONDAY).formatmonth(ma.year, ma.month, 1, 1)) #printeni az előzőleg megadott dátum hónapját, pontos napot jó lenne jelölni...
 
-alarm_days=input('hány nap múlva riasszon:')
-alarm_days=int(alarm_days)
+alarm_days=int(input('hány nap múlva riasszon:'))
+#alarm_days=int(alarm_days)
 one_day = datetime.timedelta(days=1) #just an example
 alarm_days = datetime.timedelta(days = alarm_days)
 date_of_alarm = hebrakolas_datuma + alarm_days
-print('alarm day:', date_of_alarm)
+
+print (calendar.TextCalendar(calendar.MONDAY).formatmonth(date_of_alarm.year, date_of_alarm.month, 1, 1))
+print ('alarm day:', date_of_alarm.strftime('%Y-%m-%d'))
