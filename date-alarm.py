@@ -8,6 +8,8 @@ Later create an alarm for this.
 #https://www.cyberciti.biz/faq/python-convert-string-to-int-functions/
 #date and time manipulation
 #https://pymotw.com/3/datetime/
+#https://stackoverflow.com/questions/12772057/how-to-format-date-in-iso-using-python
+#https://automatetheboringstuff.com/chapter15/
 
 import datetime
 import calendar
