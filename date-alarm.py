@@ -24,6 +24,8 @@ now=datetime.datetime.now() #precise timestamp
 ma = datetime.date.today() #only the date
 list_of_hebrakolas=[]
 
+whoh=str(input('Ki a fene vagy? '))
+whath=str(input('Mi a f*szt csináltál? '))
 print("a mai dátum", ma, "pontosabban:", now)
 hebrakolas_datuma=input("hebrákolás dátuma (YYYY-mm-dd):")
 hebrakolas_datuma=datetime.datetime.strptime(hebrakolas_datuma, "%Y-%m-%d")
@@ -35,7 +37,7 @@ one_day = datetime.timedelta(days=1) #just an example
 alarm_days = datetime.timedelta(days = alarm_days)
 date_of_alarm = hebrakolas_datuma + alarm_days
 
-list_of_hebrakolas.extend([hebrakolas_datuma, alarm_days, date_of_alarm])
+list_of_hebrakolas.extend([hebrakolas_datuma, alarm_days, date_of_alarm, whoh, whath])
 hebrakolasok=open("hebrakolasok", 'a')
 print (list_of_hebrakolas, end="\n", file=hebrakolasok)
 hebrakolasok.close()
